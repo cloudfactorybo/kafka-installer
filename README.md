@@ -4,6 +4,7 @@
 [![Build](https://img.shields.io/github/actions/workflow/status/cloudfactorybo/kafka-installer/release.yml?label=build)](https://github.com/cloudfactorybo/kafka-installer/actions/workflows/release.yml)
 ![Plataforma](https://img.shields.io/badge/plataforma-linux%20amd64%20%7C%20arm64-blue)
 ![Kafka](https://img.shields.io/badge/kafka-KRaft%20(sin%20ZooKeeper)-black)
+[![Licencia: MIT](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
 
 Instalador interactivo de **Apache Kafka** (imagen `confluentinc/cp-kafka`) sobre Docker, con **cifrado TLS** y **autenticación SASL/PLAIN**, en modo **KRaft**. Está pensado para recibir eventos de **Elastic Agent** y entregarlos a **Logstash**, y en pocos minutos deja un broker seguro y listo para producción en un único servidor.
 
@@ -32,6 +33,7 @@ flowchart LR
 - [Seguridad](#seguridad)
 - [Limitaciones](#limitaciones)
 - [Desarrollo y publicación de versiones](#desarrollo-y-publicación-de-versiones)
+- [Licencia](#licencia)
 
 ---
 
@@ -301,7 +303,8 @@ Para actualizar solo la versión de Kafka, indica la nueva versión y reutiliza 
 ├── install-kafka-seguro.sh        # Instalador
 ├── get-kafka-installer.sh         # Script de arranque: descarga y verifica la última release
 ├── .github/workflows/release.yml  # CI: valida la sintaxis y publica la release con SHA-256
-└── .gitignore                     # Excluye certificados, claves y credenciales
+├── .gitignore                     # Excluye certificados, claves y credenciales
+└── LICENSE                        # Licencia MIT
 ```
 
 Para publicar una versión nueva:
@@ -315,6 +318,12 @@ git push origin v1.0.1
 
 GitHub Actions valida la sintaxis de ambos scripts, genera `install-kafka-seguro.sh.sha256` y publica la release. Desde ese momento, `get-kafka-installer.sh` descarga automáticamente la nueva versión.
 
+## Licencia
+
+Distribuido bajo la [licencia MIT](LICENSE). Puedes usar, modificar y redistribuir este proyecto, también con fines comerciales, siempre que conserves el aviso de copyright.
+
+Copyright © 2026 **CloudFactory Bolivia** y **AltairSec**.
+
 ---
 
-Mantenido por **CloudFactory Bolivia**.
+Desarrollado y mantenido por **CloudFactory Bolivia** y **AltairSec**.
