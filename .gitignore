@@ -1,0 +1,17 @@
+# Archivos que genera el instalador: contienen claves y contraseñas.
+# NUNCA deben subirse al repositorio.
+certs/
+data/
+backup-*/
+docker-compose.yml
+kafka_server_jaas.conf
+client.properties
+client-verificado.properties
+comandos-rapidos.sh
+regenerar-cert.sh
+revisar-cert.sh
+server-ext.cnf
+*.p12
+*.pem
+*.key
+*.bak
